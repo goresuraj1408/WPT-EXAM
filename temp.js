@@ -44,10 +44,10 @@ app.get('/getbook', (req, res) => {
 		app.get('/updatebook', (req, res) => {
 			console.log("reading input " + req.query.bookid,req.query.pice);
 		
-		let input = {bookid:req.query.bookid , bookprice:req.query.price}
+		let input = {bookid:req.query.bookid , price:req.query.price}
 		let output = { bookupdatestatus:false };
 		
-		conn.query('update books set price =? where bookid =?',[input.bookprice, input.bookid],(error,result) =>{
+		conn.query('update books set price =? where bookid =?',[input.price, input.bookid],(error,result) =>{
 			if (error) {
 				console.log("some error occured " + error);
 			} else {
