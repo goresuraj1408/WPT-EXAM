@@ -55,7 +55,7 @@ app.get('/getbook', (req, res) => {
 				output.bookupdatestatus = true;
 				}
 				else
-				console.log("book not update with bookid" + input.bid);
+				console.log("book not update with bookid" + input.bookid);
 			}
 			res.send(output);
 		})
